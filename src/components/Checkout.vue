@@ -74,12 +74,7 @@ export default {
             this.data.vat = Format(vat)
             this.data.vatableSales = Format(vatableSales)
             this.data.subTotal = Format(subTotal)  
-        }
-        // else{
-        //     this.data.vat = 0
-        //     this.data.vatableSales = 0
-        //     this.data.subTotal = 0 
-        // }
+        } 
     },
     methods:{
         getTotalPrices(){
@@ -95,13 +90,7 @@ export default {
             this.data.totalPrice =  Format(totalPricesdata) 
             this.data.vatableSales = Format(vatableSales)
             this.data.vat = Format(vat)
-            this.data.subTotal = Format(subTotal)
-
-            // alert(this.data.vatableSales)
-            // this.data.vatableSales = Number(this.data.quantity) * Number(this.data.price)
-            // this.data.vatableSales = Number(this.data.quantity) * Number(this.data.price)
-            // this.data.vatableSales = Number(this.data.quantity) * Number(this.data.price)
-
+            this.data.subTotal = Format(subTotal) 
             return this.data.totalPrice 
         },
         getTotalItems(){
@@ -113,27 +102,13 @@ export default {
 
             return Format(this.data.totalItems)
         },  
-        // vatableSales(){
-        //     return Format(Number(this.data.vatableSales)) 
-        // },  
-        
-        getChange(){ 
-            // this.data.transNos = this.transNo.toString()
-            // alert(this.data.cashTendered);
-            // alert(this.data.totalPrice.replace(/,/g, ""));
+        getChange(){  
             if (Number(this.data.cashTendered.replace(/,/g, "")) >= Number(this.data.totalPrice.replace(/,/g, ""))) { 
                 if(this.data.cashTendered.length <= 15 ){
                     let change = Number(this.data.cashTendered.replace(/,/g, "")) - Number(this.data.totalPrice.replace(/,/g, ""))
                     this.data.change = Format(change) 
 
-                }
-                    //  let formatMe = Format(this.data.cashTendered)
-                    // this.data.cashTendered = formatMe
-            // let _vatableSales=FormatCustom(this.vatableSales);
-            // let _vat=Number(this.vat.replace(/,/g, ""));
-            // let _change=Number(this.change.replace(/,/g, ""));
-                 
-
+                }  
             }else{
                 this.data.change = 0
             } 

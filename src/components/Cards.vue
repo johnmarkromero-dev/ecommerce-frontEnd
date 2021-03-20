@@ -2,10 +2,7 @@
 <template>
     <div class="container" >
         <b-card 
-         
-          
             img-src="https://images.unsplash.com/photo-1611078489935-0cb964de46d6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
-
             img-alt="Image"
             img-top
             tag="article"
@@ -18,7 +15,6 @@
                 Php {{GetPrice(this.price)}}
             </b-card-text> 
         </b-card>
-        
     </div>
 </template> 
 <script>
@@ -26,8 +22,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2'
 import {Format} from "../main.js";
 export default {
-    components: { 
-        // Modals
+    components: {  
     },
     data(){
         return{
@@ -60,8 +55,6 @@ export default {
         GetLink(pic){
             return "require('./assets/" + pic + " ')"
         },
-
-
         GetProduct:function(){
             Swal.fire({
                 title: this.name,

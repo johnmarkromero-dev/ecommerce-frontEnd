@@ -76,7 +76,7 @@ export default {
                     .then(res =>{
                         this.items = res.data;  
                         console.log(res.data); 
-                        window.location.href = 'http://localhost:8080/cart'
+                        window.location.href = 'https://ecommerce-website-test.herokuapp.com/Cart'
                     }).catch(error => {
                             console.log("ERRRR  header:",error.response.data);
                     });  
